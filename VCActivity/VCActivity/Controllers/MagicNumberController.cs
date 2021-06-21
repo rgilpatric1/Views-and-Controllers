@@ -15,8 +15,18 @@ namespace VCActivity.Controllers
         [HttpPost]
         public async Task<IActionResult> FindMagicNumber(int number1, int number2)
         {
-            Random generator = new Random();
-            return View(viewName: "Index", model: generator.Next(number1, number2+1));
+            int returnedValue = -999;
+            if(number1 < number2)
+            {
+                Random generator = new Random();
+                returnedValue = generator.Next(number1, number2 + 1);
+            }
+            else if (number1 > number2)
+            {
+                Random generator = new Random();
+                returnedValue = generator.Next(number2, number1 + 1);
+            }
+            return View(viewName: "Index", model: returnedValue);
         }
     }
 }
