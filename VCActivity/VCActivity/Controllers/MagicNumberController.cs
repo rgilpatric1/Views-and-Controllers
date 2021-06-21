@@ -22,5 +22,7 @@ namespace VCActivity.Controllers
             Random rnd = new Random();
             return View(viewName: "Index", model: "Magic Number is" + rnd.Next(inputNumberOne, inputNumberTwo);
         }
+        public async Task<IActionResult> OrderofNumbers
+       
     }
 }
