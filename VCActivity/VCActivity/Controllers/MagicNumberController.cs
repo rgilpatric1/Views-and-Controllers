@@ -16,7 +16,25 @@ namespace VCActivity.Controllers
         [HttpPost]
         public async Task<IActionResult> SayMagicNumber(int inputNumber1, int inputNumber2)
         {
-            return View(viewName: "Index", model: ((new Random()).Next(inputNumber1, inputNumber2+1)));
+            return View(viewName: "Index", model: ((new Random()).Next(getSmaller(inputNumber1, inputNumber2), getBigger(inputNumber1, inputNumber2) + 1)));
+        }
+
+        public int getBigger(int a, int b)
+        {
+            if(a>b)
+            {
+                return a;
+            }
+            return b;
+        }
+
+        public int getSmaller(int a, int b)
+        {
+            if (a < b)
+            {
+                return a;
+            }
+            return b;
         }
     }
 }
