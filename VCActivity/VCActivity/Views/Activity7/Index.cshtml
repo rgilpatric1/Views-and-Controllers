@@ -1,0 +1,14 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Dates</h1>
+<div>
+    <form asp-action="absValDiff" method="post">
+        <p>Enter your last name:<input name="lastName" /> </p>
+
+        <p>Enter your age: <input name="age" type="number" /> </p>
+        <input name="submit" type="submit" />
+    </form>
+    <p>           The absolute value of the difference: @Model</p>
+</div>

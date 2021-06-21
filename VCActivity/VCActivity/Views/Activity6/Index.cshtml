@@ -1,0 +1,15 @@
+﻿
+@model String
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Dates</h1>
+<div>
+    <form asp-action="FindFullName" method="post">
+        <p>Enter your first name:<input name="firstName" /> </p>
+ 
+        <p>Enter your last name: <input name="lastName" /> </p>
+        <input name="submit" type="submit" />
+    </form>
+    <p>            Your full name is: @Model</p>
+</div>
