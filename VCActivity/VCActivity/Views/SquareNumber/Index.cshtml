@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div>
+    <form asp-action="SayCube" method="post">
+        <p>Enter the number to cube: <input name="inputNumber" type="number" step="any"/></p>
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        The cube of the input is : @Model
+    </p>
+</div>
