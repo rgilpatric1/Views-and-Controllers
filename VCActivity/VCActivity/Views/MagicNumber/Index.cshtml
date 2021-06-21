@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <form asp-action="FindMagicNumber" method="post">
+        <p>Enter the first integer: <input name="number1" type="number" /></p>
+        <p>Enter the second integer: <input name="number2" type="number" /></p>
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        A random integer between those two is: @Model
+    </p>
+</div>
