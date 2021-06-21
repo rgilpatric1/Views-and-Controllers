@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div>
+    <form asp-action="SayAbsoluteValue" method="post">
+        <p>Last Name: <input name="lastName" type="text" /></p>
+
+        <p>Age: <input name="age" type="number" /></p>
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        @Model
+    </p>
+</div>
